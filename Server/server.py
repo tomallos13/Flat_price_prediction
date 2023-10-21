@@ -3,8 +3,8 @@ import util
 import os
 
 
-template_dir = os.path.abspath('../client/')
-app = Flask(__name__, template_folder=template_dir, static_url_path='', static_folder='../client/static')
+template_dir = os.path.abspath('../html/')
+app = Flask(__name__, template_folder=template_dir, static_url_path='', static_folder='../html/static')
 
 
 @app.route('/')
@@ -34,13 +34,9 @@ def predict_home_price():
 
     return response
 
-@app.route('/favicon.ico') 
-def favicon():
-    return url_for('static', filename='data:,')
-
 
 if __name__ == "__main__":
-    print("Starting Python Flask Server For Home Price Prediction...")
+    print("Starting Python Flask Server For Flat Price Prediction...")
     util.load_saved_artifacts()
     app.run(debug=True)
     
