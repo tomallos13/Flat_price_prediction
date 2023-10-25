@@ -26,6 +26,7 @@ def predict_home_price():
     street = request.form['street']
     rooms = float(request.form['rooms'])
     floor = float(request.form['floor'])
+    terrace = float(request.form['terrace'])
 
     response = jsonify({
         'estimated_price': util.get_estimated_price(street,sqr,rooms,floor)

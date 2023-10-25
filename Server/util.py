@@ -6,7 +6,7 @@ __streets = None
 __data_columns = None
 __model = None
 
-def get_estimated_price(street,sqr,rooms,floor):
+def get_estimated_price(street,sqr,rooms,floor, terrace):
     try:
         loc_index = __data_columns.index(street.lower())
     except:
@@ -16,6 +16,7 @@ def get_estimated_price(street,sqr,rooms,floor):
     x[0] = sqr
     x[1] = rooms
     x[2] = floor
+    x[3] = terrace
     if loc_index>=0:
         x[loc_index] = 1
 
@@ -29,7 +30,7 @@ def load_saved_artifacts():
 
     with open("./columns.json", "r") as f:
         __data_columns = json.load(f)['data_columns']
-        __streets = __data_columns[3:]  # first 3 columns are sqr, rooms, floor
+        __streets = __data_columns[4:]  # first 4 columns are sqr, rooms, floor, terrace
 
     global __model
     if __model is None:
