@@ -4,60 +4,57 @@
     <title>Flat Price Prediction</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="app.css" />
-
 </head>
 <body>
 <div class="img"></div>
 <form class="form">
-	<h2>Flat Size (m2)</h2>
-    <input class="area"  type="text" id="uiSqr" class="floatLabel" name="Sqr" value="50">
-	<h2>Rooms</h2>
-	<div class="switch-field">
-		<input type="radio" id="radio-Rooms-1" name="uiRooms" value="1"/>
-		<label for="radio-Rooms-1">1</label>
-		<input type="radio" id="radio-Rooms-2" name="uiRooms" value="2" checked/>
-		<label for="radio-Rooms-2">2</label>
-		<input type="radio" id="radio-Rooms-3" name="uiRooms" value="3"/>
-		<label for="radio-Rooms-3">3</label>
-		<input type="radio" id="radio-Rooms-4" name="uiRooms" value="4"/>
-		<label for="radio-Rooms-4">4</label>
-		<input type="radio" id="radio-Rooms-5" name="uiRooms" value="5"/>
-		<label for="radio-Rooms-5">5</label>
-	</div>
-	
-	</form>
-<form class="form">
-	<h2>Floor</h2>
-	<div class="switch-field">
-		<input type="radio" id="radio-Floor-1" name="uiFloor" value="1"/>
-		<label for="radio-Floor-1">1</label>
-		<input type="radio" id="radio-Floor-2" name="uiFloor" value="2"/>
-		<label for="radio-Floor-2">2</label>
-		<input type="radio" id="radio-Floor-3" name="uiFloor" value="3"/>
-		<label for="radio-Floor-3">3</label>
-		<input type="radio" id="radio-Floor-4" name="uiFloor" value="4"/>
-		<label for="radio-Floor-4">4</label>
-		<input type="radio" id="radio-Floor-5" name="uiFloor" value="5"/>
-		<label for="radio-Floor-5">5</label>
-	</div>
-	<h2>Terrace</h2>
-	<div class="switch-field">
-		<input type="radio" id="radio-Terrace-1" name="uiTerrace" value="0"/>
-		<label for="radio-Terrace-1">	No	</label>
-		<input type="radio" id="radio-Terrace-2" name="uiTerrace" value="1"/>
-		<label for="radio-Terrace-2">	Yes	 </label>
-	</div>
-		<h2>Street</h2>
-	<div>
-		<select class="street" name="" id="uiStreets">
-			<option value="" disabled="disabled" selected="selected">Choose a Location</option>
-				<option>Arbuzowa</option>
-				<option>Krakowska</option>
-		</select>
-	</div>
-	<button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
-	<div id="uiEstimatedPrice" class="result">	<h2></h2> </div>
+    <h2>Flat Size (m2)</h2>
+    <input class="area" type="text" id="uiSqr" class="floatLabel" name="Sqr" value="50">
+    <h2>Rooms</h2>
+    <div class="switch-field">
+        <input type="radio" id="radio-Rooms-1" name="uiRooms" value="1"/>
+        <label for="radio-Rooms-1">1</label>
+        <input type="radio" id="radio-Rooms-2" name="uiRooms" value="2" checked/>
+        <label for="radio-Rooms-2">2</label>
+        <input type="radio" id="radio-Rooms-3" name="uiRooms" value="3"/>
+        <label for="radio-Rooms-3">3</label>
+        <input type="radio" id="radio-Rooms-4" name="uiRooms" value="4"/>
+        <label for="radio-Rooms-4">4</label>
+        <input type="radio" id="radio-Rooms-5" name="uiRooms" value="5"/>
+        <label for="radio-Rooms-5">5</label>
+    </div>
+    
+    <h2>Floor</h2>
+    <select id="uiFloor" class="area">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+    </select>
 
+    <h2>Terrace</h2>
+    <div class="switch-field">
+        <input type="radio" id="radio-Terrace-1" name="uiTerrace" value="0"/>
+        <label for="radio-Terrace-1">No</label>
+        <input type="radio" id="radio-Terrace-2" name="uiTerrace" value="1"/>
+        <label for="radio-Terrace-2">Yes</label>
+    </div>
+
+    <h2>Street</h2>
+    <select class="street" name="" id="uiStreets">
+        <option value="" disabled="disabled" selected="selected">Choose a Location</option>
+        <option>Arbuzowa</option>
+        <option>Krakowska</option>
+    </select>
+    <button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
+	<div id="uiEstimatedPrice" class="result"><h2></h2></div>
 	<script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
 </html>
