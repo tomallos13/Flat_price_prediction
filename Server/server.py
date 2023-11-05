@@ -29,7 +29,7 @@ def predict_home_price():
     terrace = float(request.form['terrace'])
 
     response = jsonify({
-        'estimated_price': util.get_estimated_price(street,sqr,rooms,floor)
+        'estimated_price': util.get_estimated_price(street,sqr,rooms,floor, terrace)
     })
     response.headers.add('Access-Control-Allow-Origin', '*')
 
