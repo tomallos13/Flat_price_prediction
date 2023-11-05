@@ -5,12 +5,27 @@
 ## Table of Contents
 
 1. [Project Description](#project-description)
+2. [Technology and tools](#technology-and-tools)
 3. [Running the Project](#running-the-project)
 4. [Project Structure](#project-structure)
 
 ## Project Description
 
 The goal of this project is to create a model for predicting flat rental prices based on available data such as area, number of rooms, floor, presence of a terrace, and more. The model is based on linear regression and has been trained on available data from a CSV file.
+
+## Technology and tools
+
+1. Python
+   
+   * Numpy and Pandas for data cleaning
+     
+   * Matplotlib and seaborn for data visualization
+     
+   * Sklearn for model building
+     
+   * Flask for http server
+     
+2. HTML/CSS/Javascript for UI
 
 ## Running the Project
 
