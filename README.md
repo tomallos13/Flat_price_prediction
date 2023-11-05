@@ -35,18 +35,18 @@ To run the project, follow these steps:
    ```shell
     http://127.0.0.1:5000/
 
-Project Structure
+## Project Structure
 
-    flat_price_prediction.ipynb: The main file containing regression models.
+* flat_price_prediction.ipynb: The main file containing regression models.
     
-    server.py: The main file containing routing, and serving the web page
+* server.py: The main file containing routing, and serving the web page
 
-    util.py: A script with functions for handling flat price prediction.
+* util.py: A script with functions for handling flat price prediction.
 
-    app.html: The web page template.
+* app.html: The web page template.
 
-    app.js: A JavaScript script responsible for communication with the Flask server and handling the interface.
+* app.js: A JavaScript script responsible for communication with the Flask server and handling the interface.
 
-    app.css: A stylesheet for the web page.
+* app.css: A stylesheet for the web page.
 
-    city_rentals.csv: A CSV file containing data on flat rental prices in the city.
+* city_rentals.csv: A CSV file containing data on flat rental prices in the city.
